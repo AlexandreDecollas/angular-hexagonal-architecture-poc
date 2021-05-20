@@ -1,0 +1,19 @@
+<router-outlet></router-outlet>
+
+<br>
+<br>
+<hr>
+
+<h5>Add a Driver</h5>
+<div class="p-field p-col-12 p-md-4">
+    <span class="p-float-label">
+      <input type="text" id="firstname" pInputText [(ngModel)]="firstname"/>
+      <label for="firstname">First Name</label>
+    </span>
+  <span class="p-float-label">
+      <input type="text" id="lastname" pInputText [(ngModel)]="lastname"/>
+      <label for="lastname">Last Name</label>
+    </span>
+</div>
+
+<button pButton type="button" label="Submit" class="p-button-text" (click)="addNewDriver(firstname, lastname)"></button>
