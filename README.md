@@ -1,6 +1,6 @@
 # Introduction
 
-This project is an example of hexagonale architecture, with angular. It's a POC used as a showcase to present the advantages of such an architecture.
+This project is an example of hexagonal architecture, with angular. It's a POC used as a showcase to present the advantages of such an architecture.
 
 All the business rules are in the domain folder, without any use of any framework. A port is present in `/domain/ports`. This interface is implemented in the angular project, and injected in components who need it.
 
