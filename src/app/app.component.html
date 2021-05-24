@@ -1,19 +1,32 @@
-<router-outlet></router-outlet>
+<div class="p-grid">
+    <div class="p-col-8 p-offset-3">
+        <div class="card">
+            <p-table [value]="clients">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>
+                            Client
+                        </th>
+                        <th>
+                            <button
+                                    pButton
+                                    pRipple
+                                    type="button"
+                                    label="Add client"
+                                    class="p-button-rounded"
+                                    (click)="addNewClient()"
+                            ></button>
+                        </th>
+                    </tr>
 
-<br>
-<br>
-<hr>
+                </ng-template>
+                <ng-template pTemplate="body" let-client>
+                    <tr>
+                        <app-drive [client]="client"></app-drive>
+                    </tr>
+                </ng-template>
+            </p-table>
 
-<h5>Add a Taxi</h5>
-<div class="p-field p-col-12 p-md-4">
-    <span class="p-float-label">
-      <input type="text" id="firstname" pInputText [(ngModel)]="firstname"/>
-      <label for="firstname">First Name</label>
-    </span>
-  <span class="p-float-label">
-      <input type="text" id="lastname" pInputText [(ngModel)]="lastname"/>
-      <label for="lastname">Last Name</label>
-    </span>
+        </div>
+    </div>
 </div>
-
-<button pButton type="button" label="Submit" class="p-button-text" (click)="addNewDriver(firstname, lastname)"></button>

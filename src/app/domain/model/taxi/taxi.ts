@@ -21,7 +21,7 @@ export default class Taxi {
         if (this._currentClient === null) {
             return;
         }
-        this._taxiCallCenter.clientPaidTheBill(this._currentClient);
+        this._taxiCallCenter.clientPaidTheBill(this, this._currentClient);
     }
 
     public enter(client: Client): void {

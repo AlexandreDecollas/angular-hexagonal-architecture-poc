@@ -1,0 +1,15 @@
+<th>
+    <div>
+        <app-client (reservedATaxi)="reserveTaxi()"></app-client>
+    </div>
+</th>
+<th>
+    <div>
+        <app-taxi [hidden]="!taxiReserved"
+                  [client]="client"
+                  [taxi]="taxi"
+                  (enteredTaxi)="enteredTaxi(client)"
+                  (startedDrive)="startedDrive($event)"
+        ></app-taxi>
+    </div>
+</th>

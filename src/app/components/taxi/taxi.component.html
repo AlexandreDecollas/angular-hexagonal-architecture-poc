@@ -1,0 +1,25 @@
+<div class="p-grid p-pt-2 p-pl-5 ">
+    <div>
+        <p>Taxi</p>
+    </div>
+    <div class="p-pl-3 p-pt-2">
+        <button (click)="enterTaxi()"
+                [disabled]="clientEntered"
+                pButton
+                pRipple
+                type="button"
+                label="Enter The Taxi"
+                class="p-button-rounded"
+        ></button>
+    </div>
+    <div class="p-pl-3 p-pt-2">
+        <button (click)="startDriving()"
+                [disabled]="clientDriveFinished"
+                pButton
+                pRipple
+                type="button"
+                label="Start driving"
+                class="p-button-rounded"
+        ></button>
+    </div>
+</div>
