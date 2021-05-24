@@ -7,11 +7,11 @@ import spyOn = jest.spyOn;
 describe('Taxi', () => {
     let taxi: Taxi;
 
-    let taxiCallCenter: TaxiCallCenter;
     const accountBook: AccountBook = {
         registerDrive: jest.fn(),
         registerClientBill: jest.fn()
     };
+    let taxiCallCenter: TaxiCallCenter;
 
     beforeEach(() => {
         taxiCallCenter = new TaxiCallCenter(accountBook);
@@ -28,7 +28,7 @@ describe('Taxi', () => {
 
         taxi.driveClientToDestination();
 
-        expect(taxiCallCenter.clientPaidTheBill).toHaveBeenCalledWith(client);
+        expect(taxiCallCenter.clientPaidTheBill).toHaveBeenCalledWith(taxi, client);
     });
 
 });
