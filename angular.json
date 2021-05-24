@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hexa-poc": {
+    "angular-hexagonal-architecture-poc": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hexa-poc",
+            "outputPath": "dist/angular-hexagonal-architecture-poc",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hexa-poc:build"
+            "browserTarget": "angular-hexagonal-architecture-poc:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "hexa-poc:build:production"
+              "browserTarget": "angular-hexagonal-architecture-poc:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hexa-poc:build"
+            "browserTarget": "angular-hexagonal-architecture-poc:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "hexa-poc"
+  "defaultProject": "angular-hexagonal-architecture-poc"
 }

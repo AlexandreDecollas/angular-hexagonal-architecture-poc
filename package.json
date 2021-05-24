@@ -1,6 +1,6 @@
 {
-  "name": "hexa-poc",
-  "version": "0.0.0",
+  "name": "angular-hexagonal-architecture-poc",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
