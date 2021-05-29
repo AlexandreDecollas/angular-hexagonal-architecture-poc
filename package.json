@@ -1,0 +1,17 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start:front": "yarn --cwd ./front run start",
+    "start:back": "yarn --cwd ./back run start",
+    "test": "yarn run test:front && yarn run test:back",
+    "test:front": "yarn --cwd ./front run test",
+    "test:back": "yarn --cwd ./back run test"
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
