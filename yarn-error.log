@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/alexandre/.nvm/versions/node/v12.16.1/bin/node /Users/alexandre/.yarn/bin/yarn.js run test:front
+  /Users/alexandre/.nvm/versions/node/v12.16.1/bin/node /Users/alexandre/.yarn/bin/yarn.js run start:back
 
 PATH: 
   /Users/alexandre/.cargo/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/alexandre/.yarn/bin:/Users/alexandre/.config/yarn/global/node_modules/.bin:/Users/alexandre/.yarn/bin:/Users/alexandre/.config/yarn/global/node_modules/.bin:/Users/alexandre/.nvm/versions/node/v12.16.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Users/alexandre/bin:/Users/alexandre/workspace/veille/maven/Install/apache-maven-3.6.2/bin:/Users/alexandre/workspace/petproject/tools/arm-bcm2708/arm-linux-gnueabihf/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/alexandre/workspace/veille/hexagong-poc/package.json: Unexpected token } in JSON at position 251
+  SyntaxError: /Users/alexandre/workspace/veille/hexagong-poc/package.json: Unexpected token } in JSON at position 348
       at JSON.parse (<anonymous>)
       at /Users/alexandre/.yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -27,23 +27,13 @@ npm manifest:
     "version": "1.0.0",
     "scripts": {
       "ng": "ng",
-      "start": "ng serve",
+      "start:front": "yarn --cwd ./front run start",
+      "start:back": "yarn --cwd ./back run start",
       "test": "yarn run test:front && yarn run test:back",
-      "test:front": "yarn --cwd ./front run est",
-      "test:back": "yarn --cwd ./back run test",
+      "test:front": "yarn --cwd ./front run test",
+      "test:back": "yarn --cwd ./back run test"
     },
     "private": true,
-    "dependencies": {
-    },
-    "devDependencies": {
-      "@types/jest": "^26.0.23",
-      "@types/node": "^12.11.1",
-      "jest": "^26.6.3",
-      "jest-preset-angular": "^8.4.0",
-      "ts-jest": "^26.5.6",
-      "ts-node": "~8.3.0",
-      "typescript": "^4.2.3"
-    }
   }
 
 yarn manifest: 
