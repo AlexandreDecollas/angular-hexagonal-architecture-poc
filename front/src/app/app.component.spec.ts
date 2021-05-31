@@ -2,9 +2,8 @@ import {TestBed} from '@angular/core/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
-import {MockComponents, MockModule, MockProviders} from 'ng-mocks';
-import {Table, TableModule} from 'primeng/table';
-import {DriveComponent} from './components/drive/drive.component';
+import {MockModule} from 'ng-mocks';
+import {TableModule} from 'primeng/table';
 import {DriveModule} from './components/drive/drive.module';
 import {AccountBookModule} from './adapters/account-book/account-book.module';
 
@@ -16,7 +15,7 @@ describe('AppComponent', () => {
                 FormsModule,
                 TableModule,
                 DriveModule,
-                AccountBookModule
+                MockModule(AccountBookModule)
             ],
             declarations: [
                 AppComponent,

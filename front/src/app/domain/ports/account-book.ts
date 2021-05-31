@@ -3,7 +3,7 @@ import Client from '../model/client/client';
 
 export default interface AccountBook {
 
-    registerDrive(taxi: Taxi): void
-    registerClientBill(taxi: Taxi, client: Client): void
-
+    registerDrive(taxi: Taxi): void;
+    registerClientBill(taxi: Taxi, client: Client): void;
+    registerClientReservation(client: Client, taxi: Taxi): void;
 }

@@ -22,10 +22,8 @@ export class AppComponent implements OnInit {
 
 
     public ngOnInit(): void {
-        this._taxiCallCenter = new TaxiCallCenter(this._accountBook);
     }
 
     public addNewClient() {
-        this.clients.push(new Client(this._taxiCallCenter));
     }
 }

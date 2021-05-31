@@ -16,15 +16,11 @@ export class DriveComponent {
     public taxi!: Taxi;
 
     public reserveTaxi(): void {
-        this.taxi = this.client.reserveTaxi();
-        this.taxiReserved = true;
     }
 
     public enteredTaxi(client: Client) {
-        client.enterReservedTaxi();
     }
 
     public startedDrive(taxi: Taxi) {
-        taxi.driveClientToDestination();
     }
 }
